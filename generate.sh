@@ -15,7 +15,7 @@ fi
 else
 PRO_NAME=$1;
 fi
-#创建目录
+#generate directory
 echo "Init $PRO_NAME Directory …"
 mkdir -p $PRO_NAME/api/proto
 mkdir -p $PRO_NAME/api/$PRO_NAME
@@ -38,10 +38,11 @@ mkdir -p $PRO_NAME/vendor
 mkdir -p $PRO_NAME/web
 mkdir -p $PRO_NAME/website
 cd $PRO_NAME
+touch .gitkeep
 go mod init $PRO_NAME
 
 
-#创建main.go
+#generate main.go
 echo "Generate main.go "
 cd cmd
 echo "package main" > main.go
